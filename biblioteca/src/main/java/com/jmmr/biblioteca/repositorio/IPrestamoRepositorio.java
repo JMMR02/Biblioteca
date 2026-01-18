@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.jmmr.biblioteca.modelo.entidad.Prestamo;
 
 @Repository
-public interface IPrestamoRepositorio extends JpaRepository<Integer, Prestamo> {
+public interface IPrestamoRepositorio extends JpaRepository<Prestamo, Integer> {
 }
 

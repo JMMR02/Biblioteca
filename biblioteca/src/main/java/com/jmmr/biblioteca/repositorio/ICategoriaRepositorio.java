@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.jmmr.biblioteca.modelo.entidad.Categoria;
 
 @Repository
-public interface ICategoriaRepositorio extends JpaRepository<Integer, Categoria> {
+public interface ICategoriaRepositorio extends JpaRepository<Categoria, Integer> {
 }
 

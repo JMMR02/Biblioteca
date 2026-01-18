@@ -17,6 +17,7 @@ public class Autor implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	
+	private int idAutor;
 	private String nombre;
 	private String nacionalidad;
 	

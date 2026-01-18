@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.jmmr.biblioteca.modelo.entidad.Usuario;
 
 @Repository
-public interface IUsuarioRepositorio extends JpaRepository<Integer, Usuario> {
+public interface IUsuarioRepositorio extends JpaRepository<Usuario, Integer> {
 }
 

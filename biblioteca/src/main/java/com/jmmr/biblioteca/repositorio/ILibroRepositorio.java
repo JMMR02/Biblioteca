@@ -9,6 +9,6 @@ import com.jmmr.biblioteca.modelo.entidad.*;
 @Repository
 @Component
 
-public interface ILibroRepositorio extends JpaRepository<Integer, Libro>{
+public interface ILibroRepositorio extends JpaRepository<Libro, Integer>{
 
 }
