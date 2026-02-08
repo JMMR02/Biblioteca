@@ -18,7 +18,7 @@ public class PrestamoServicioImpl implements IPrestamoServicio{
 	public IPrestamoRepositorio repositorioPrestamo;
 	
 	@Override
-	public Prestamo insertarLibro(Prestamo nuevoPrestamo) {
+	public Prestamo insertarPrestamo(Prestamo nuevoPrestamo) {
 		// TODO Auto-generated method stub
 		return repositorioPrestamo.save(nuevoPrestamo);
 	}
@@ -41,5 +41,7 @@ public class PrestamoServicioImpl implements IPrestamoServicio{
 		// TODO Auto-generated method stub
 		return repositorioPrestamo.findAll();
 	}
+
+	
 
 }
