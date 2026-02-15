@@ -4,9 +4,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,32 +16,26 @@ import lombok.ToString;
 
 @Entity
 @Data
+public class Libro implements Serializable {
 
-public class Libro implements Serializable {/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	
-	private int idLibro;
-	private String titulo;
-	private String isbn;
-	
-	@ManyToOne
-	@JoinColumn(name = "id_categoria")
-	@JsonManagedReference
-	private Categoria categoria;
+    private static final long serialVersionUID = 1L;
 
-	@ManyToOne
-	@JoinColumn(name = "id_autor")
-	@JsonManagedReference
-	private Autor autor;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int idLibro;
 
-	@ToString.Exclude
-	@OneToMany(mappedBy = "libro")
-	@JsonBackReference
-	private List<Prestamo> listaPrestamos = new ArrayList<>();
-	
+    private String titulo;
+    private String isbn;
+
+    @ManyToOne
+    @JoinColumn(name = "id_categoria")
+    private Categoria categoria;
+
+    @ManyToOne
+    @JoinColumn(name = "id_autor")
+    private Autor autor;
+
+    @ToString.Exclude
+    @OneToMany(mappedBy = "libro")
+    private List<Prestamo> listaPrestamos = new ArrayList<>();
 }

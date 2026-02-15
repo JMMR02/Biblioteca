@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -23,12 +23,12 @@ public class Categoria implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    
-    private int idCategoria;    
+    private int idCategoria;
+
     private String nombre;
-    
+
     @ToString.Exclude
     @OneToMany(mappedBy = "categoria", cascade = CascadeType.REFRESH)
-    @JsonBackReference
+    @JsonIgnore
     private List<Libro> listaLibros = new ArrayList<>();
 }

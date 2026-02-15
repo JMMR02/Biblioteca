@@ -4,7 +4,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -29,8 +30,9 @@ public class Autor implements Serializable {
 	
 	@ToString.Exclude
 	@OneToMany(mappedBy = "autor", cascade = CascadeType.REFRESH)
-	@JsonBackReference
+	@JsonIgnore
 	private List<Libro> listaLibros = new ArrayList<>();
+
 	
 	
 
