@@ -1,0 +1,76 @@
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <input type="hidden" name="idLibro">
+
+                    <div class="form-group">
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Libro"
+                            name="nombreLibro">
+                    </div>
+
+                    <div class="form-group">
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Descripción"
+                            name="descripcionLibro">
+                    </div>
+
+                    <div class="form-group">
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Estado"
+                            name="estadoLibro">
+                    </div>
+
+                    <div class="form-group">
+                        <button class="btn btn-primary mr-2 btn-sm">
+                            Clean
+                        </button>
+                        <button class="btn btn-secondary btn-sm">
+                            Save
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-8">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>Libro</td>
+                    <td>Descripción</td>
+                    <td>Estado</td>
+                    <td>Operations</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button class="btn btn-secondary btn-sm">
+                            <i class="material-symbols-outlined">
+                                edit
+                            </i>
+                        </button>
+                        <button class="btn btn-danger btn-sm">
+                            <i class="material-symbols-outlined">
+                                delete
+                            </i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
