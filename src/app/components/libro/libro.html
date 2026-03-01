@@ -46,17 +46,19 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <td>Libro</td>
-                    <td>Descripción</td>
-                    <td>Estado</td>
-                    <td>Operations</td>
+                    <td>Nombre de Libro</td>
+                    <td>isbn</td>
+                    <td>Categoría</td>
+                    <td>Autor</td>
+                    <td>Opciones</td>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                <tr *ngFor="let libro of libroService.libros">
+                    <td>{{libro.titulo}}</td>
+                    <td>{{libro.isbn}}</td>
+                    <td>{{ libro.categoria?.nombre }}</td>
+                    <td>{{ libro.autor?.nombre }}</td>
                     <td>
                         <button class="btn btn-secondary btn-sm">
                             <i class="material-symbols-outlined">
